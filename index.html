@@ -26,6 +26,7 @@
                 </div>
             </div>
         </div>
+
         <!--------THIS IS THE ABOUT SECTION-------->
         <div id="about">
             <div class="container">
@@ -38,28 +39,28 @@
                         <p>My name is Casey. I am a web designer, programmer, game developer and all around Wizard. Welcome to my portfolio. Here you will find various projects that I have made or contributed to. I hope that you can recognize my talent and consider it as an asset towards whatever endeavor you are currently accomplishing.</p>
 
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>Unity and Unreal</span><br>Designing Websites and Video Games</li>
                                 <li><span>HTML/CSS/JavaScript</span><br>Web Design and Functionality</li>
                                 <li><span>Mechanical Keyboards</span><br>Mechanical Keyboard aesthetics and programming</li>
                             </ul>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Unity and Unreal</span><br>Designing Websites and Video Games</li>
+                                <li><span>This is a test</span><br>Designing Websites and Video Games</li>
                                 <li><span>HTML/CSS/JavaScript</span><br>Web Design and Functionality</li>
                                 <li><span>Mechanical Keyboards</span><br>Mechanical Keyboard aesthetics and programming</li>
                             </ul>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>Unity and Unreal</span><br>Designing Websites and Video Games</li>
-                                <li><span>HTML/CSS/JavaScript</span><br>Web Design and Functionality</li>
+                                <li><span>This is a test</span><br>Web Design and Functionality</li>
                                 <li><span>Mechanical Keyboards</span><br>Mechanical Keyboard aesthetics and programming</li>
                             </ul>
                         </div>
@@ -67,5 +68,47 @@
                 </div>
             </div>
         </div>
+        <!-------------------This is the services section---------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Development</h2>
+                <p>I am an accomplished web developer with a talent for aesthetics and design. My goal is to create websites that are easy to use and pleasing to the eye. I can guarantee that I would be a great choice for you web needs.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Game Development</h2>
+                <p>I use Unity 2D & 3D as well as Unreal Engine to develop cohesive and functional games.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Custom Mechanical Keyboards</h2>
+                <p>As a long time custom keyboard enthusiast, I know how to make your experience feel as premium as possible with whatever build or layout you want.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
     </body>
 </html>
