@@ -11,12 +11,12 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/background.jpg);
+    background-image: url(./Images/board2.jpg);
     background-size: cover;
     background-position: center;
 }
 .container{
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 
 nav{
@@ -66,7 +66,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color:#ff004f;
 }
-/* --------THIS IS THE ABOUT SECTION---------- */
+/* --------THIS IS THE ABOUT SECTION ---------- */
 #about{
     padding: 80px 0;
     color: #ababab;
@@ -76,9 +76,9 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .about-col-1{
     flex-basis: 35%;
+    border-radius: 10px;
 }
 .about-col-1{
     width: 100%;
@@ -89,10 +89,11 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 60px;
+    font-size: 50;
     font-weight: 600;
     color: #fff;
 }
+
 /*------------------THIS IS THE RESUME SECTION-------------------*/
 .tab-titles{
     display: flex;
@@ -100,7 +101,7 @@ nav ul li a:hover::after{
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 35px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -122,11 +123,11 @@ nav ul li a:hover::after{
 /*----------TAB CONTENTS SECTION-----------*/
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
+    margin: 50px 0;
 }
 .tab-contents ul li span{
     color: #ff004f;
-    font-size: 14px;
+    font-size: 25px;
 }
 .tab-contents{
     display: none;
@@ -138,6 +139,7 @@ nav ul li a:hover::after{
 /*------------SERVICES SECTION------------*/
 #services{
     padding: 30px 0;
+    font-size: 25px;
 }
 .services-list{
     display: grid;
@@ -175,3 +177,6 @@ nav ul li a:hover::after{
 }
 
 /*---------------Portfolio Section -------*/
+#portfolio{
+    padding: 50px 0;
+}
