@@ -11,7 +11,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(./Images/board2.jpg);
+    background-image: url(./Images/parallax-space-backgound.png);
     background-size: cover;
     background-position: center;
 }
@@ -46,7 +46,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #9977c7;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -64,7 +64,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color:#ff004f;
+    color:#9977c7;
 }
 /* --------THIS IS THE ABOUT SECTION ---------- */
 #about{
@@ -110,7 +110,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #9977c7;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -126,7 +126,7 @@ nav ul li a:hover::after{
     margin: 50px 0;
 }
 .tab-contents ul li span{
-    color: #ff004f;
+    color: #9977c7;
     font-size: 25px;
 }
 .tab-contents{
@@ -172,11 +172,69 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #9977c7;
     transform: translateY(-10px);
 }
 
 /*---------------Portfolio Section -------*/
 #portfolio{
     padding: 50px 0;
+    font-size: 25px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #9977c7);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #9977c7;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
 }
